@@ -45,5 +45,7 @@ mod tests {
         let mut data = vec![0, 34, 1, 12, 3, 55, 32, 5, 1, 21, 17];
         let length = data.len() - 1;
         qs(&mut data, 1, length);
+
+        assert_eq!(data, vec![0, 1, 1, 3, 5, 12, 17, 21, 32, 34, 55]);
     }
 }
